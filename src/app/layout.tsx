@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 import Navbar from '~/components/Navbar'
 import Provider from './context/Provider';
 import ThemeProvider from './context/next-theme-provider';
-import { db } from '~/server/db';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +22,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(db)
   // const session = await getServerSession(authOptions);
   return (
     <html lang="en">
